@@ -1,0 +1,131 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+div {
+  color: #ffffff;
+}
+
+.info {
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 260px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.mypic {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 491px;
+  height: 491px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 10px rgba(0, 102, 255, 0.329);
+  
+  img {
+    width: 700px;
+    height: auto;
+    object-fit: cover;
+    object-position: 20px -5px;
+  }
+}
+
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 0px;
+}
+
+.my-name {
+  text-transform: uppercase;
+}
+
+.job {
+  color: rgb(193, 209, 0);
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background-color: #ff0;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-top;
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ff0;
+  }
+}
+
+@media (max-width: 810px) {
+  .info {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    height: auto;
+    padding: 0px;
+  }
+
+  .mypic {
+    width: 300px;
+    height: 300px;
+  }
+
+  .mypic img {
+    width: 100%;
+    height: auto;
+    object-position: center;
+  }
+
+  .left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .my-name {
+    font-size: 1.5rem;
+  }
+
+  .job {
+    font-size: 1.2rem;
+  }
+
+  .location {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mypic {
+    width: 230px;
+    height: 230px;
+  }
+
+  .greetings {
+    font-size: 1.2rem;
+  }
+
+  .my-name {
+    font-size: 1.5rem;
+  }
+
+  .job {
+    font-size: 1.4rem;
+  }
+
+  .location {
+    font-size: 0.9rem;
+  }
+}
