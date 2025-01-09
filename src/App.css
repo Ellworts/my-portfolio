@@ -37,7 +37,11 @@ html {
     padding: 0 ;
   }
 }
-
+.burger-menu-wrapper {
+  width: 100%;
+  height: 50px;
+  background-color: #000000cb;
+}
 .burger-menu {
   display: none;
   flex-direction: column;
@@ -46,8 +50,8 @@ html {
   height: 21px;
   cursor: pointer;
   position: absolute;
-  left: 20px;
-  top: 20px;
+  right: 20px;
+  top: 15px;
 }
 
 .burger-menu .line {
@@ -79,7 +83,8 @@ html {
 
 .nav-menu ul.open {
   display: block;
-  background: #000000;
+  background-color: #000000cb;
+
 }
 
 .nav-menu button {

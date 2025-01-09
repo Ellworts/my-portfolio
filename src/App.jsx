@@ -12,10 +12,12 @@ function Navigation({ activePage, setActivePage }) {
 
   return (
     <nav className="nav-menu">
-      <div className="burger-menu" onClick={() => setMenuOpen(!menuOpen)}>
-        <div className={menuOpen ? 'line open' : 'line'}></div>
-        <div className={menuOpen ? 'line open' : 'line'}></div>
-        <div className={menuOpen ? 'line open' : 'line'}></div>
+      <div className="burger-menu-wrapper">
+        <div className="burger-menu" onClick={() => setMenuOpen(!menuOpen)}>
+          <div className={menuOpen ? 'line open' : 'line'}></div>
+          <div className={menuOpen ? 'line open' : 'line'}></div>
+          <div className={menuOpen ? 'line open' : 'line'}></div>
+        </div>
       </div>
       <ul className={menuOpen ? 'open' : ''}>
         <li><button className={activePage === 'Home' ? 'active' : ''} onClick={() => { setActivePage('Home'); setMenuOpen(false); }}>Home</button></li>
@@ -28,7 +30,7 @@ function Navigation({ activePage, setActivePage }) {
 }
 
 function App() {
-  const [activePage, setActivePage] = useState('Home');
+  const [activePage, setActivePage] = useState('About');
 
   useEffect(() => {
     AOS.init({ duration: 1000 });

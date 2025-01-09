@@ -12,17 +12,11 @@ function AboutPage() {
   }, []);
 
   const aboutMe = `
-    Hi! My name is Mykhailo Kuptsov, and I am a web developer from Ukraine who
-    moved to London, United Kingdom. I have 1 year of experience as frontend developer
-    in freelance. For me, creating websites is more than just a job - it’s about creating
-    experiences that make people’s daily online routines more enjoyable and seamless.
+Hi! My name is Mykhailo Kuptsov, and I am a web developer from Ukraine who moved to London, United Kingdom. I have 1 year of experience as frontend developer in freelance. For me, creating websites is more than just a job - it’s about creating  experiences that make people’s daily online routines more enjoyable and seamless.
 
-    My goal is to make your website user-friendly yet visually appealing. I ensure that
-    it doesn’t only stand out but also leaves a lasting impression. I focus on making your
-    product recognisable while making the website attractive and easy to navigate. I am
-    passionate about conveying your message and identity in the most creative and impactful way.
-    
-    If you are interested in hiring me, feel free to reach out via the contact information listed!
+My goal is to make your website visually appealing so that it doesn’t only stand out but also leaves a lasting impression. I focus on making your product recognisable while making the website attractive and easy to navigate. I am passionate about conveing your message and identity in the most creative and impactful way.
+
+If you are interested in hiring me, feel free to reach out via the contact information listed!
   `;
 
   const techStack = [
@@ -53,16 +47,16 @@ function AboutPage() {
 
   return (
     <div className='about-container'>
-      <div className="gray-container">
-        <div className="headline-container" data-aos="fade-right">
+      <div className="gray-container" data-aos="fade-up">
+        <div className="headline-container">
           <h1 className='about-header'>About Me </h1>
           <span className="about-underline"></span>
         </div>
-        <div className="about-grid" data-aos="fade-left">
-          <div className="about-mypic" data-aos="flip-left">
+        <div className="about-grid">
+          <div className="about-mypic" data-aos="fade-up">
             <img src={myPhoto} alt="mypic" loading="lazy" />
           </div>
-          <p className='about-text' data-aos="fade-up">
+          <p className='about-text'>
             {aboutMe.split('\n').map((line, index) => (
               <React.Fragment key={index}>
                 {line.trim()}
