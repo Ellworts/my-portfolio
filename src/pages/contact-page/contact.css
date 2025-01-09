@@ -76,13 +76,14 @@
 
 @media (max-width: 600px) {
   .contact-container {
+    height: 100vh;
     padding-top: 100px;
   }
 
   .contact-links {
     grid-template-columns: repeat(2, 1fr);
     gap: 0px;
-    margin-top: 80px;
+    margin-top: 50px;
   }
 
   .contact-card {
