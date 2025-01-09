@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.3cd320cc.css",
-    "main.js": "/my-portfolio/static/js/main.f76a864d.js",
+    "main.css": "/my-portfolio/static/css/main.a687d0fd.css",
+    "main.js": "/my-portfolio/static/js/main.a8bb854a.js",
     "static/js/453.acca0757.chunk.js": "/my-portfolio/static/js/453.acca0757.chunk.js",
     "static/media/rizni-rivni.webp": "/my-portfolio/static/media/rizni-rivni.116c3a8406a8efa64e7a.webp",
     "static/media/kickstarter.png": "/my-portfolio/static/media/kickstarter.9871ad2e356a83aaf550.png",
@@ -10,12 +10,12 @@
     "static/media/my-photo.webp": "/my-portfolio/static/media/my-photo.a4b1d9f8202bc21c508c.webp",
     "static/media/MnC.webp": "/my-portfolio/static/media/MnC.f21ae23daffcd7063f65.webp",
     "index.html": "/my-portfolio/index.html",
-    "main.3cd320cc.css.map": "/my-portfolio/static/css/main.3cd320cc.css.map",
-    "main.f76a864d.js.map": "/my-portfolio/static/js/main.f76a864d.js.map",
+    "main.a687d0fd.css.map": "/my-portfolio/static/css/main.a687d0fd.css.map",
+    "main.a8bb854a.js.map": "/my-portfolio/static/js/main.a8bb854a.js.map",
     "453.acca0757.chunk.js.map": "/my-portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cd320cc.css",
-    "static/js/main.f76a864d.js"
+    "static/css/main.a687d0fd.css",
+    "static/js/main.a8bb854a.js"
   ]
 }
