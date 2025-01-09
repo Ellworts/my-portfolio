@@ -14,7 +14,7 @@ function AboutPage() {
   const aboutMe = `
 Hi! My name is Mykhailo Kuptsov, and I am a web developer from Ukraine who moved to London, United Kingdom. I have 1 year of experience as frontend developer in freelance. For me, creating websites is more than just a job - it’s about creating  experiences that make people’s daily online routines more enjoyable and seamless.
 
-My goal is to make your website visually appealing so that it doesn’t only stand out but also leaves a lasting impression. I focus on making your product recognisable while making the website attractive and easy to navigate. I am passionate about conveing your message and identity in the most creative and impactful way.
+My goal is to make your website visually appealing so that it doesn’t only stand out but also leaves a lasting impression. I am very passionate about technologies and making websites attractive and easy to navigate. I focus on conveing your message and identity in the most creative and impactful way.
 
 If you are interested in hiring me, feel free to reach out via the contact information listed!
   `;

@@ -232,7 +232,7 @@
     grid-template-columns: repeat(2, 1fr);
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
   }
 }
 
