@@ -30,7 +30,7 @@ function Navigation({ activePage, setActivePage }) {
 }
 
 function App() {
-  const [activePage, setActivePage] = useState('About');
+  const [activePage, setActivePage] = useState('Home');
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
