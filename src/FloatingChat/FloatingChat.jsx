@@ -110,7 +110,7 @@ const FloatingChat = () => {
   };
 
   const getApiKey = () => {
-    return process.env.API_KEY; // Ensure the API key is accessed correctly
+    return process.env.REACT_APP_API_KEY;
   };
 
   return (
