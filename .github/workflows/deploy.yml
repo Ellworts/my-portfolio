@@ -24,5 +24,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}  # Используем ваш PAT, сохранённый в секрете
-        publish_dir: ./build  # Путь к директории с собранным проектом
+        personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./build
+    
