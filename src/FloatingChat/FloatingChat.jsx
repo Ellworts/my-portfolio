@@ -110,7 +110,7 @@ const FloatingChat = () => {
   };
 
   const getApiKey = () => {
-    return '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';
+    return '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';
   };
 
   return (
