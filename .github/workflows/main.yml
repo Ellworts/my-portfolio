@@ -24,7 +24,10 @@ jobs:
     - name: Build project
       run: npm run build
 
+    - name: Print environment variables for debugging
+      run: printenv
+
     - name: Deploy
       run: npm run deploy
       env:
-        API_KEY: ${{ secrets.API_KEY }}
+        REACT_APP_API_KEY: ${{ secrets.API_KEY }}
