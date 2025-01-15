@@ -110,7 +110,7 @@ const FloatingChat = () => {
   };
 
   const getApiKey = () => {
-    return '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';
+    return process.env.REACT_APP_API_KEY;
   };
 
   return (
