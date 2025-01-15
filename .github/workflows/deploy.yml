@@ -1,9 +1,6 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - gh-pages
   workflow_dispatch:  # Триггер для ручного запуска
 
 jobs:
@@ -33,3 +30,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           publish_branch: gh-pages
+        env:
+          REACT_APP_API_KEY: ${{ secrets.API_KEY }}
