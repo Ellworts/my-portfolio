@@ -1,33 +1,37 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # Триггер при пуше в main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      # Шаг 1: Клонируем репозиторий
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+      # Шаг 2: Устанавливаем зависимости и собираем проект
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
 
-    - name: Install dependencies
-      run: npm install
+      # Шаг 3: Передаём ключ API как переменную окружения
+      - name: Use API Key for Build
+        env:
+          REACT_APP_API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          echo "Using API Key for build"
+          # Здесь ключ может быть использован в процессе сборки
+          echo "REACT_APP_API_KEY=$REACT_APP_API_KEY" > .env
 
-    - name: Build project
-      run: npm run build
-
-    - name: Print environment variables for debugging
-      run: printenv
-
-    - name: Deploy
-      run: npm run deploy
-      env:
-        REACT_APP_API_KEY: ${{ secrets.API_KEY }}
+      # Шаг 4: Деплой в ветку gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Путь к собранному проекту
