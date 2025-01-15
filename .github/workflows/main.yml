@@ -16,22 +16,16 @@ jobs:
 
       # Шаг 2: Устанавливаем зависимости и собираем проект
       - name: Install and Build
+        env:
+          REACT_APP_API_KEY: ${{ secrets.API_KEY }}
         run: |
           npm install
           npm run build
 
-      # Шаг 3: Передаём ключ API как переменную окружения
-      - name: Use API Key for Build
-        env:
-          REACT_APP_API_KEY: ${{ secrets.API_KEY }}
-        run: |
-          echo "Using API Key for build"
-          # Здесь ключ может быть использован в процессе сборки
-          echo "REACT_APP_API_KEY=$REACT_APP_API_KEY" > .env
-
-      # Шаг 4: Деплой в ветку gh-pages
+      # Шаг 3: Деплой в ветку gh-pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Путь к собранному проекту
+          publish_dir: ./build
+          publish_branch: gh-pages
