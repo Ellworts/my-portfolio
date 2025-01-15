@@ -1,0 +1,91 @@
+{
+  "personalInfo": {
+    "name": "Mykhailo Kuptsov",
+    "title": "Frontend Developer",
+    "experience": "Nearly 2 years",
+    "specialization": "Building modern and responsive web applications",
+    "skills": {
+      "programmingLanguages": ["TypeScript", "JavaScript (ES6+)", "React", "Angular (Basics)", "Vue", "Python"],
+      "frontendTechnologies": ["HTML5", "CSS3", "Sass", "TailwindCSS"],
+      "buildToolsAndLibraries": ["Vite", "AOS (Animate on Scroll)"],
+      "versionControl": ["Git", "GitHub"],
+      "packageManagers": ["npm"],
+      "database": ["MySQL (basic knowledge)"]
+    },
+    "contact": {
+      "email": "kuptsov5162@gmail.com",
+      "phone": "+447767853122",
+      "linkedin": "https://www.linkedin.com/in/ellworts/"
+    }
+  },
+  "education": [
+    {
+      "institution": "Mate Academy",
+      "course": "Frontend Development",
+      "location": "London, UK",
+      "duration": "Oct 2023 — Jul 2024",
+      "description": "I acquired valuable coding skills through this course, where I learned JavaScript, HTML, CSS, React, and basic Angular. This training provided me with a solid foundation in front-end development, enabling me to create dynamic and responsive web applications. The hands-on experience with these technologies has greatly enhanced my problem-solving abilities and understanding of modern web development frameworks."
+    },
+    {
+      "institution": "Kharkiv National University of Radioelectronics (KHNURE)",
+      "course": "Cybersecurity",
+      "duration": "Sep 2021 — Sep 2022",
+      "description": "At this institution, I developed programming skills in C++, C, and C#. I had to drop out of university because I left the country due to the outbreak of war."
+    }
+  ],
+  "portfolio": [
+    {
+      "name": "Portfolio Website",
+      "link": "https://ellworts.github.io/my-portfolio/",
+      "description": "This website was created to make it easier for you to explore my projects and contact me if needed."
+    },
+    {
+      "name": "Kickstarter",
+      "link": "https://ellworts.github.io/kickstarter/"
+    },
+    {
+      "name": "The Met",
+      "link": "https://ellworts.github.io/landing-page/"
+    },
+    {
+      "name": "2048",
+      "link": "https://ellworts.github.io/2048/"
+    },
+    {
+      "name": "M&C",
+      "link": "https://ellworts.github.io/mnc-page/"
+    },
+    {
+      "name": "Rizni-Rivni",
+      "link": "https://ellworts.github.io/riznirivni/"
+    }
+  ],
+  "workExperience": [
+    {
+      "position": "Web Developer",
+      "company": "Freelance",
+      "duration": "Nov 2024 - Present",
+      "responsibilities": [
+        "Building modern and responsive web applications."
+      ]
+    },
+    {
+      "position": "Video Editor",
+      "company": "Freelance",
+      "duration": "Feb 2021 — Aug 2021",
+      "responsibilities": [
+        "Editing and producing video content using tools like After Effects, Sony Vegas Pro, and Premiere Pro."
+      ]
+    },
+    {
+      "position": "Chef",
+      "company": "Miller & Carter",
+      "duration": "Oct 2022 — Present",
+      "responsibilities": [
+        "Preparing and cooking meals",
+        "Maintaining kitchen hygiene",
+        "Ensuring high-quality customer service"
+      ]
+    }
+  ]
+}

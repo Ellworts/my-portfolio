@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import AboutPage from './pages/about-page/about';
 import Title from './pages/projects-page/title';
 import ContactPage from './pages/contact-page/contact';
+import FloatingChat from './FloatingChat/FloatingChat';
 
 function Navigation({ activePage, setActivePage }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <div className="App">
+      <FloatingChat />
       <Navigation activePage={activePage} setActivePage={setActivePage} />
       {activePage === 'Home' && <HomePage />}
       {activePage === 'About' && <AboutPage />}
