@@ -23,8 +23,6 @@ jobs:
 
     - name: Build project
       run: npm run build
-      env:
-        REACT_APP_API_KEY: ${{ secrets.API_KEY }} // Ensure the API key is available during build
 
     - name: Print environment variables for debugging
       run: printenv
@@ -32,4 +30,4 @@ jobs:
     - name: Deploy
       run: npm run deploy
       env:
-        REACT_APP_API_KEY: ${{ secrets.API_KEY }} // Ensure the API key is available during deploy
+        REACT_APP_API_KEY: ${{ secrets.API_KEY }}
