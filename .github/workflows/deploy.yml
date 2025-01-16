@@ -24,12 +24,19 @@ jobs:
 
       - name: Set up Git authentication
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/${{ github.repository }}.git
+          git config --global credential.helper store
+          git remote set-url origin https://github.com/${{ github.repository }}.git
 
       - name: Set Git user
         run: |
           git config --global user.name "Misha Kuptsov"
           git config --global user.email "azazin1955@gmail.com"
+
+      - name: Check git remote configuration
+        run: git remote -v
+
+      - name: Build the project
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
