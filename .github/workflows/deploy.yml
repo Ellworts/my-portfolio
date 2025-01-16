@@ -26,7 +26,7 @@ jobs:
         run: |
           git config --global user.name "Misha Kuptsov"
           git config --global user.email "azazin1955@gmail.com"
-          git remote set-url origin https://MishaKuptsov:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://MishaKuptsov:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/${{ github.repository }}.git
 
       - name: Check git remote configuration
         run: git remote -v
