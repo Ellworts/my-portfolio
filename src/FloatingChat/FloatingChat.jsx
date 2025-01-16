@@ -23,7 +23,7 @@ const FloatingChat = () => {
       setMessages([...messages, userMessage]);
       setInputMessage("");
 
-      const apiKey = getApiKey();
+      const apiKey = process.env.REACT_APP_API_KEY;;
       if (!apiKey) {
         const botMessage = { text: "API key is missing.", sender: "bot", id: messages.length + 1 };
         setMessages((prevMessages) => [...prevMessages, botMessage]);
@@ -114,9 +114,6 @@ const FloatingChat = () => {
     }
   };
 
-  const getApiKey = () => {
-    return process.env.API_KEY;
-  };
 
   return (
     <div className="chat-container">
