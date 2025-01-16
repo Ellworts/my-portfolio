@@ -25,7 +25,7 @@ jobs:
       - name: Set up Git authentication
         run: |
           git config --global credential.helper 'store --file=.git-credentials'
-          echo "https://${{ secrets.GITHUB_TOKEN }}:x-oauth-basic@github.com" > .git-credentials
+          echo "https://${{ secrets.ACTIONS_DEPLOY_KEY }}:x-oauth-basic@github.com" > .git-credentials
           git config --global user.name "Misha Kuptsov"
           git config --global user.email "azazin1955@gmail.com"
 
@@ -42,4 +42,4 @@ jobs:
         run: |
           npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
