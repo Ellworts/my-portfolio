@@ -27,6 +27,10 @@ jobs:
           git config --global user.name "Misha Kuptsov"
           git config --global user.email "azazin1955@gmail.com"
 
+      - name: Set up Git authentication
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
