@@ -24,9 +24,8 @@ jobs:
 
       - name: Set up Git authentication
         run: |
-          git config --global credential.helper store
-          git remote set-url origin https://github.com/${{ github.repository }}.git
-
+          git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/${{ github.repository }}.git
+          
       - name: Set Git user
         run: |
           git config --global user.name "Misha Kuptsov"
