@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.7a1ed2e8.css",
+    "main.js": "/my-portfolio/static/js/main.2fa22122.js",
+    "static/js/453.acca0757.chunk.js": "/my-portfolio/static/js/453.acca0757.chunk.js",
+    "static/media/rizni-rivni.webp": "/my-portfolio/static/media/rizni-rivni.116c3a8406a8efa64e7a.webp",
+    "static/media/kickstarter.png": "/my-portfolio/static/media/kickstarter.9871ad2e356a83aaf550.png",
+    "static/media/projects.png": "/my-portfolio/static/media/projects.4ad6454e044ad893c8b1.png",
+    "static/media/met.webp": "/my-portfolio/static/media/met.598509328ea3ce7ecd1a.webp",
+    "static/media/my-photo.webp": "/my-portfolio/static/media/my-photo.a4b1d9f8202bc21c508c.webp",
+    "static/media/MnC.webp": "/my-portfolio/static/media/MnC.f21ae23daffcd7063f65.webp",
+    "index.html": "/my-portfolio/index.html",
+    "main.7a1ed2e8.css.map": "/my-portfolio/static/css/main.7a1ed2e8.css.map",
+    "main.2fa22122.js.map": "/my-portfolio/static/js/main.2fa22122.js.map",
+    "453.acca0757.chunk.js.map": "/my-portfolio/static/js/453.acca0757.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a1ed2e8.css",
+    "static/js/main.2fa22122.js"
+  ]
+}
