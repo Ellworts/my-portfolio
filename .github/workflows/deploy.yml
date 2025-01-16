@@ -19,12 +19,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set environment variable
-        run: echo "REACT_APP_API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+      - name: Set environment variable for API key
+        run: echo "REACT_APP_API_KEY=${{ secrets.MY_API_KEY }}" >> $GITHUB_ENV
 
-      # Деплой на GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: Set Git user
         run: |
-          npm run deploy
+          git config --global user.name "Misha Kuptsov"
+          git config --global user.email "azazin1955@gmail.com"
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
