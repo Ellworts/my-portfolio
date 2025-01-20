@@ -12,7 +12,7 @@ function AboutPage() {
   }, []);
 
   const aboutMe = `
-Hi! My name is Mykhailo Kuptsov, and I am a web developer from Ukraine who moved to London, United Kingdom. I have 1 year of experience as frontend developer in freelance. For me, creating websites is more than just a job - it’s about creating  experiences that make people’s daily online routines more enjoyable and seamless.
+Hi! My name is Mykhailo Kuptsov, and I am a web developer from Ukraine who moved to London, United Kingdom. I have over a year of experience as frontend developer in freelance. For me, creating websites is more than just a job - it’s about creating  experiences that make people’s daily online routines more enjoyable and seamless.
 
 My goal is to make your website visually appealing so that it doesn’t only stand out but also leaves a lasting impression. I am very passionate about technologies and making websites attractive and easy to navigate. I focus on conveing your message and identity in the most creative and impactful way.
 
@@ -30,8 +30,7 @@ If you are interested in hiring me, feel free to reach out via the contact infor
     { name: "Typescript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", level: "Advanced" },
     { name: "ReactJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", level: "Advanced" },
     { name: "Sass", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", level: "Advanced" },
-    { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", level: "Intermediate" },
-    { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg", level: "Intermediate" },
+    { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg", level: "Intermediate" },
   ];
 
   const tools = [

@@ -73,7 +73,6 @@ const FloatingChat = () => {
   };
 
   useEffect(() => {
-    // Initialize with a default message from the bot
     const initialBotMessage = { text: "Hi, my name is Mykhailo and you can ask anything about me in this AI chatbot!", sender: "bot", id: 0 };
     setMessages([initialBotMessage]);
   }, []);
