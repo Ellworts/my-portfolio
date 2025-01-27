@@ -11,7 +11,7 @@ function ContactPage() {
     {
       name: "WhatsApp",
       description: "+447767853122",
-      icon: "https://cdn.icon-icons.com/icons2/1476/PNG/512/whatsapp_101778.png",
+      icon: "https://img.icons8.com/?size=100&id=16713&format=png&color=000000",
       link: "https://wa.me/447767853122"
     },
     {
