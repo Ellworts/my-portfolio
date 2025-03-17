@@ -16,12 +16,12 @@ function BlogPage() {
     });
   }, []);
 
-
   useEffect(() => {
     const fetchPosts = async () => {
       const postsCollection = collection(db, 'telegramPosts');
       const postSnapshot = await getDocs(postsCollection);
       const postList = postSnapshot.docs.map(doc => doc.data());
+      postList.sort((a, b) => b.timestamp - a.timestamp); // Sort posts by timestamp in descending order
       setPosts(postList);
     };
 
