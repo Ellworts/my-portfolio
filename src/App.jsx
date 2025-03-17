@@ -7,6 +7,7 @@ import AboutPage from './pages/about-page/about';
 import Title from './pages/projects-page/title';
 import ContactPage from './pages/contact-page/contact';
 import FloatingChat from './FloatingChat/FloatingChat';
+import BlogPage from './pages/blog-page/blog';
 
 function Navigation({ activePage, setActivePage }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,6 +26,7 @@ function Navigation({ activePage, setActivePage }) {
         <li><button className={activePage === 'About' ? 'active' : ''} onClick={() => { setActivePage('About'); setMenuOpen(false); }}>About</button></li>
         <li><button className={activePage === 'Projects' ? 'active' : ''} onClick={() => { setActivePage('Projects'); setMenuOpen(false); }}>Projects</button></li>
         <li><button className={activePage === 'Contact' ? 'active' : ''} onClick={() => { setActivePage('Contact'); setMenuOpen(false); }}>Contact</button></li>
+        <li><button className={activePage === 'Blog' ? 'active' : ''} onClick={() => { setActivePage('Blog'); setMenuOpen(false); }}>Blog</button></li>
       </ul>
     </nav>
   );
@@ -45,6 +47,7 @@ function App() {
       {activePage === 'About' && <AboutPage />}
       {activePage === 'Projects' && <Title />}
       {activePage === 'Contact' && <ContactPage />}
+      {activePage === 'Blog' && <BlogPage />}
     </div>
   );
 }

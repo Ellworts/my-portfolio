@@ -1,0 +1,17 @@
+.blog-container {
+  padding-top: 6%;
+  margin-left: 90px;
+  margin-right: 90px;
+  padding-bottom: 20px;
+
+  @media (max-width: 810px) {
+    padding-top: 20%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+.telegram-widget-container {
+  margin-bottom: 20px;
+}
