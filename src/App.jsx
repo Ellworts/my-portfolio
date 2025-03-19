@@ -11,9 +11,26 @@ import BlogPage from './pages/blog-page/blog';
 
 function Navigation({ activePage, setActivePage }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setIsVisible(false); // Hide on scroll down
+      } else {
+        setIsVisible(true); // Show on scroll up
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="nav-menu">
+    <nav className={`nav-menu ${isVisible ? '' : 'hidden'}`}>
       <div className="burger-menu-wrapper">
         <div className="burger-menu" onClick={() => setMenuOpen(!menuOpen)}>
           <div className={menuOpen ? 'line open' : 'line'}></div>
