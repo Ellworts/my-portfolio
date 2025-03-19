@@ -17,7 +17,9 @@ function Navigation({ activePage, setActivePage }) {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
+      if (window.scrollY === 0) {
+        setIsVisible(true); // Always show at the top of the page
+      } else if (window.scrollY > lastScrollY) {
         setIsVisible(false); // Hide on scroll down
       } else {
         setIsVisible(true); // Show on scroll up
