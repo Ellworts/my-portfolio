@@ -9,6 +9,8 @@ import ContactPage from './pages/contact-page/contact';
 import FloatingChat from './FloatingChat/FloatingChat';
 import BlogPage from './pages/blog-page/blog';
 
+
+
 function Navigation({ activePage, setActivePage }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -18,11 +20,11 @@ function Navigation({ activePage, setActivePage }) {
 
     const handleScroll = () => {
       if (window.scrollY === 0) {
-        setIsVisible(true); // Always show at the top of the page
+        setIsVisible(true);
       } else if (window.scrollY > lastScrollY) {
-        setIsVisible(false); // Hide on scroll down
+        setIsVisible(false);
       } else {
-        setIsVisible(true); // Show on scroll up
+        setIsVisible(true);
       }
       lastScrollY = window.scrollY;
     };

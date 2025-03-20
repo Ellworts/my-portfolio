@@ -17,6 +17,28 @@ div {
   height: 100%;
 }
 
+.underline-anim {
+  position: relative;
+}
+
+.underline-anim::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.underline-anim:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
 .mypic {
   border-radius: 50%;
   overflow: hidden;
@@ -25,13 +47,22 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 20px 10px rgba(0, 102, 255, 0.329);
-  
+  animation: flicker 1.5s infinite alternate;
+
   img {
     width: 700px;
     height: auto;
     object-fit: cover;
     object-position: 20px -5px;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    box-shadow: 0 0 20px 10px rgba(0, 102, 255, 0.329);
+  }
+  100% {
+    box-shadow: 0 0 20px 5px rgba(0, 102, 255, 0.2);
   }
 }
 

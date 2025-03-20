@@ -53,7 +53,7 @@ function HomePage() {
           {text}
           <span className="typing-cursor"></span>
         </h2>
-        <p className="location">London, United Kingdom</p>
+        <p className="location"><span className="underline-anim">London</span>, <span className="underline-anim">United Kingdom</span></p>
       </div>
       <div className="right" data-aos="fade-left">
         <div className="mypic">
