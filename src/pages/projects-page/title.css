@@ -11,12 +11,15 @@
   gap: 70px;
   max-width: 1300px;
   margin: 0 auto;  
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 
   @media (max-width: 1000px) {
     max-width: 800px;
     padding-top: 100px;
     padding-bottom: 100px;
-  gap: 40px;
+    gap: 40px;
   }
 
   @media (max-width: 768px) {
@@ -24,7 +27,20 @@
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: auto;
+    gap: 20px;
   }
+}
+
+.card-list.slide-left {
+  transform: translateX(-100%);
+}
+
+.card-list.slide-right {
+  transform: translateX(100%);
+}
+
+.card-list.fade {
+  opacity: 0;
 }
 
 .card {
@@ -69,4 +85,50 @@
 
 .card:hover .card-title {
   opacity: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.pagination-button.left {
+  left: 20px;
+}
+
+.pagination-button.right {
+  right: 20px;
+}
+
+.pagination-button:disabled {
+  color: #333;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .pagination-button {
+    display: none;
+  }
+
+  .card-list {
+    gap: 20px;
+  }
 }
