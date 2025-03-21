@@ -33,8 +33,24 @@ function Title() {
     };
     handleResize();
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+
+    const handleKeyDown = (event) => {
+      if (!isMobile) {
+        if (event.key === 'ArrowRight') {
+          handleNext();
+        } else if (event.key === 'ArrowLeft') {
+          handlePrev();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isMobile, currentPage]);
 
   const currentCards = isMobile
     ? cardData
@@ -83,7 +99,7 @@ function Title() {
       </div>
       {!isMobile && (
         <button onClick={handleNext} disabled={currentPage === totalPages - 1} className="pagination-button right">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 24 24">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16l4-4l-4-4"></path>
           </svg>
         </button>
