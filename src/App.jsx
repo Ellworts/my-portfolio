@@ -9,8 +9,6 @@ import ContactPage from './pages/contact-page/contact';
 import FloatingChat from './FloatingChat/FloatingChat';
 import BlogPage from './pages/blog-page/blog';
 
-
-
 function Navigation({ activePage, setActivePage }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -54,11 +52,19 @@ function Navigation({ activePage, setActivePage }) {
 }
 
 function App() {
-  const [activePage, setActivePage] = useState('Home');
+  const [activePage, setActivePage] = useState(() => {
+    // Загружаем сохранённую страницу, если есть
+    return localStorage.getItem('activePage') || 'Home';
+  });
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  useEffect(() => {
+    // Сохраняем в localStorage при смене активной страницы
+    localStorage.setItem('activePage', activePage);
+  }, [activePage]);
 
   return (
     <div className="App">
